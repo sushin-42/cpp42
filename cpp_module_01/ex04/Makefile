@@ -1,6 +1,7 @@
-NAME = account
-SRCS = test.cpp \
-		Account.cpp
+NAME = phonebook
+SRCS = main.cpp \
+		Phonebook.cpp \
+		Contact.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98

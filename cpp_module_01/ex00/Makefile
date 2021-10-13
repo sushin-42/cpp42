@@ -1,6 +1,8 @@
-NAME = account
-SRCS = test.cpp \
-		Account.cpp
+NAME = zombie
+SRCS = main.cpp \
+		Zombie.cpp \
+		newZombie.cpp \
+		randomChump.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
