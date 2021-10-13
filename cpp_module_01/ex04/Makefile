@@ -1,7 +1,6 @@
-NAME = phonebook
+NAME = replace
 SRCS = main.cpp \
-		Phonebook.cpp \
-		Contact.cpp
+
 
 OBJS = $(SRCS:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
