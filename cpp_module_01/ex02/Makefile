@@ -1,7 +1,5 @@
-NAME = phonebook
-SRCS = main.cpp \
-		Phonebook.cpp \
-		Contact.cpp
+NAME = brain
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
