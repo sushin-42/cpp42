@@ -1,7 +1,8 @@
-NAME = phonebook
+NAME = violence
 SRCS = main.cpp \
-		Phonebook.cpp \
-		Contact.cpp
+		Weapon.cpp \
+		HumanA.cpp \
+		HumanB.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
