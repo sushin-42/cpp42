@@ -8,24 +8,24 @@ void	Karen::complain(std::string level)
 	std::string	findLevel[4] = { "DEBUG", "INFO", "WARNING", "ERROR"};
 	std::string	*findLevelPtr = std::find(findLevel, findLevel + (sizeof(findLevel) / sizeof(findLevel[0])), level);
 
+	std::cout << "\""<< level << "\"" << " level" << std::endl;
 	if (findLevelPtr == findLevel + (sizeof(findLevel) / sizeof(findLevel[0])))
 	{
 		std::cout << " No data " << std::endl;
 		return ;
 	}
-	std::cout << "\""<< level << "\"" << " level" << std::endl;
 	ptrFunc = callFunc[findLevelPtr - findLevel];
 	(this->*ptrFunc)();
 }
 
 Karen::Karen()
 {
-	std::cout << "karan constructor" << std::endl;
+	std::cout << " karan constructor " << std::endl;
 }
 
 Karen::~Karen()
 {
-	std::cout << "karan de_constructor" << std::endl;
+	std::cout << " karan de_constructor " << std::endl;
 }
 
 void	Karen::voiddebug(void)
