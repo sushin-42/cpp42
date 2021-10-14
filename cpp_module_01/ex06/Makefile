@@ -1,4 +1,4 @@
-NAME = karen
+NAME = karenFilter
 SRCS = main.cpp \
 		Karen.cpp
 
