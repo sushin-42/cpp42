@@ -6,34 +6,20 @@
 
 class Karen
 {
-private:
-	/* data */
+
 public:
-	Karen(/* args */);
+
+	Karen();
 	~Karen();
+	void	complain(std::string level);
+
+private:
+
+	void	voiddebug(void);
+	void	voidinfo(void);
+	void	voidwarning(void);
+	void	voiderror(void);
 };
-
-Karen::Karen(/* args */)
-{
-}
-
-Karen::~Karen()
-{
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

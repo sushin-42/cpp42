@@ -2,7 +2,11 @@
 
 int	main(void)
 {
+	Karen karen;
 
-	std::cout << "hello" << std::endl;
+	karen.complain("INFO");
+	karen.complain("ERROR");
+	karen.complain("DEBUG");
+	karen.complain("WARNING");
 	return (0);
 }
