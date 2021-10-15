@@ -1,0 +1,24 @@
+NAME =  diamondtrap
+SRCS = main.cpp \
+		 ScavTrap.cpp \
+		 ClapTrap.cpp \
+		 FragTrap.cpp \
+		 DiamondTrap.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
+CC = clang++
+
+$(NAME) : $(OBJS)
+	$(CC) -c $(FLAGS) $(SRCS)
+	$(CC) -o $(NAME) $(OBJS)
+
+all : $(NAME)
+
+clean :
+	$(RM) $(OBJS)
+
+fclean : clean
+	$(RM) $(NAME)
+
+re: fclean all
