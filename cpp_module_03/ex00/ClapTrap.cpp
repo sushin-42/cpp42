@@ -61,19 +61,19 @@ void ClapTrap::attack(std::string const &target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
     std::cout << PURPLE;
-    if (_energyPoint > amount)
+    if (_hitPoint > amount)
     {
-        std::cout << _name << " before HP is " << _energyPoint << std::endl;
+        std::cout << _name << " before HP is " << _hitPoint << std::endl;
         std::cout << _name << " take damage " << amount << std::endl;
-        _energyPoint -= amount;
-        std::cout << _name << " after  HP is " << _energyPoint << std::endl;
+        _hitPoint -= amount;
+        std::cout << _name << " after  HP is " << _hitPoint << std::endl;
     }
     else
     {
-        std::cout << _name << " before HP is " << _energyPoint << std::endl;
+        std::cout << _name << " before HP is " << _hitPoint << std::endl;
         std::cout << _name << " take damage " << amount << std::endl;
-        _energyPoint = 0;
-        std::cout << _name << " is fainted " << _energyPoint << std::endl;
+        _hitPoint = 0;
+        std::cout << _name << " is fainted " << _hitPoint << std::endl;
     }
     std::cout << RESET;
 }
@@ -81,10 +81,10 @@ void ClapTrap::takeDamage(unsigned int amount)
 void ClapTrap::beRepaired(unsigned int amount)
 {
     std::cout << CYAN;
-    std::cout << _name << " before HP is " << _energyPoint << std::endl;
+    std::cout << _name << " before HP is " << _hitPoint << std::endl;
     std::cout << _name << " be repaired " << amount << std::endl;
-    _energyPoint += amount;
-    std::cout << _name << " after  HP is " << _energyPoint << std::endl;
+    _hitPoint += amount;
+    std::cout << _name << " after  HP is " << _hitPoint << std::endl;
     std::cout << RESET;
 }
 unsigned int ClapTrap::getAttackDamage() const
