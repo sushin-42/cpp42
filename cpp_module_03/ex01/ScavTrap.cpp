@@ -32,7 +32,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &srcObject)
     _hitPoint = srcObject._hitPoint;
     _energyPoint = srcObject._energyPoint;
     _attackDamage = srcObject._attackDamage;
-    // ClapTrap::operator=(srcObject);
     _gateKeeperMode = srcObject._gateKeeperMode;
     std::cout << GREEN;
     std::cout << " Scav operator " << std::endl;
@@ -50,8 +49,15 @@ void ScavTrap::attack(std::string const &target)
 void ScavTrap::guardGate(void)
 {
     std::cout << RED;
-    _gateKeeperMode = true;
-    std::cout << "ScavTrap " << _name << " entered gate keeper mode " << std::endl;
+    if (_hitPoint)
+    {
+        _gateKeeperMode = true;
+        std::cout << "ScavTrap " << _name << " entered gate keeper mode " << std::endl;
+    }
+    else
+    {
+        std::cout << "ScavTrap " << _name << " really? ScavTrap is died " << std::endl;
+    }
     std::cout << RESET;
 }
 
