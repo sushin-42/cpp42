@@ -1,10 +1,8 @@
-NAME = polymorphism
+NAME = bureaucrat
 SRCS = main.cpp \
-		Animal.cpp \
-		Cat.cpp \
-		Dog.cpp \
-		WrongAnimal.cpp \
-		WrongCat.cpp
+		Bureaucrat.cpp \
+		Form.cpp
+		
 OBJS = $(SRCS:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = clang++
