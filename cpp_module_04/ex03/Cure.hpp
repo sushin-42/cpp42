@@ -12,7 +12,7 @@ public:
 
     virtual Cure &operator=(const Cure &srcObject);
 
-    virtual Cure *clone() const;
+    virtual AMateria *clone() const;
     virtual void use(ICharacter &si);
 
     virtual ~Cure(void);

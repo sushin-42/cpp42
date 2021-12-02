@@ -27,14 +27,14 @@ Cure &Cure::operator=(const Cure &srcObject)
     return (*this);
 }
 
-Cure *Cure::clone() const
+AMateria *Cure::clone() const
 {
     return (new Cure());
 }
 
 void Cure::use(ICharacter &si)
 {
-    std::cout << "[Cure] * heals " << si.getName() << "’s wounds  *" << std::endl;
+    std::cout << "[Cure] * heals " << si.getName() << "'s wounds  *" << std::endl;
 }
 
 Cure::~Cure(void)

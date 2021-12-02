@@ -21,14 +21,11 @@ Character::Character(const Character &srcObject)
     _name = srcObject.getName();
     for (int i = 0; i < 4; i++)
     {
-        if (_inven[i])
-        {
-            delete _inven[i];
-            _inven[i] = NULL;
-        }
         const AMateria *temp = srcObject.getMateria(i);
         if (temp)
             _inven[i] = temp->clone();
+        else
+            _inven[i] = nullptr;
     }
     std::cout << " [Character] copy constructor " << std::endl;
 }
