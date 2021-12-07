@@ -1,3 +1,6 @@
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
+
 #include <iostream>
 #include <string>
 
@@ -22,3 +25,4 @@ T ft_min(T x, T y)
 {
     return (x > y ? y : x);
 }
+#endif

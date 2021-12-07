@@ -1,3 +1,5 @@
+#ifndef ITER_HPP
+#define ITER_HPP
 #include <iostream>
 
 template <typename T>
@@ -20,3 +22,4 @@ void test(T &x)
     std::cout << x << std::endl;
     std::cout << "" << std::endl;
 }
+#endif
